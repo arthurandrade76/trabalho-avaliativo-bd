@@ -1,0 +1,6 @@
+INSERT INTO usuario (email, senha) VALUES
+('vascorebaixado@gmail.com','cosquinha321')
+
+UPDATE professor SET fk_id_instituicao = 3 WHERE id_professor = 2
+
+DELETE FROM instituicao WHERE id_instituicao = 6

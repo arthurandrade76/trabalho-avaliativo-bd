@@ -1,0 +1,13 @@
+SELECT curso.nome_curso, curso.duracao, instituicao.nome 
+FROM curso 
+INNER JOIN instituicao ON curso.fk_id_instituicao = instituicao.id_instituicao 
+WHERE instituicao.nome ILIKE '%cesv%'
+
+SELECT professor.nome AS nome_prof, instituicao.nome AS nome_inst 
+FROM instituicao  
+RIGHT JOIN professor ON professor.fk_id_instituicao = instituicao.id_instituicao
+
+SELECT curso.id_curso, curso.nome_curso, curso.duracao, instituicao.nome AS nome_inst 
+FROM curso
+LEFT JOIN instituicao ON curso.fk_id_instituicao = instituicao.id_instituicao 
+ORDER BY curso.id_curso ASC
