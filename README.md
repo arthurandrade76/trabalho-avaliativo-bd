@@ -19,3 +19,11 @@ Interface: Console (Terminal)
 Confira a explicação detalhada do sistema e do código no link abaixo:
 
 https://youtu.be/19N_Sl7wdG8
+
+Executando em Java
+
+Importe o projeto na sua IDE (VS Code, IntelliJ,Eclipse ou Netbeans).
+
+Certifique-se de ter o driver JDBC no classpath.
+
+Execute a classe Main.java.
