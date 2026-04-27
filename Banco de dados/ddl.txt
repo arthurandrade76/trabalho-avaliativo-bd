@@ -1,1 +1,25 @@
-
+CREATE TABLE instituicao (
+id_instituicao SERIAL PRIMARY KEY,
+nome VARCHAR(200) NOT NULL,
+cnpj VARCHAR(14) UNIQUE NOT NULL,
+endereco VARCHAR(200) NOT NULL
+);
+CREATE TABLE curso (
+id_curso SERIAL PRIMARY KEY,
+fk_id_instituicao INT REFERENCES instituicao(id_instituicao),
+nome_curso VARCHAR(100) NOT NULL,
+duracao INT NOT NULL
+);
+CREATE TABLE usuario (
+id_usuario SERIAL PRIMARY KEY,
+email VARCHAR(200) UNIQUE NOT NULL,
+senha VARCHAR(50) NOT NULL,
+tipo_perfil VARCHAR(20)
+);
+CREATE TABLE professor (
+id_professor SERIAL PRIMARY KEY,
+fk_id_usuario INT REFERENCES usuario(id_usuario),
+email VARCHAR(200) UNIQUE NOT NULL,
+nome VARCHAR(200) NOT NULL,
+materias VARCHAR(100)
+);
